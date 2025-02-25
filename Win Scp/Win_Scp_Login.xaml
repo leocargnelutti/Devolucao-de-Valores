@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_WinScpBrowser" Type="OutArgument(ui:UiElement)" />
+    <x:Property Name="in_Emails" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1102,2862</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1112,2797" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="userName" />
+      <Variable x:TypeArguments="ss:SecureString" Name="password" />
+      <Variable x:TypeArguments="x:String" Default="C:\Program Files (x86)\WinSCP\winscp.exe" Name="caminhoWinScp" />
+      <Variable x:TypeArguments="x:String" Default="sep0450cb" Name="hostName" />
+      <Variable x:TypeArguments="x:Boolean" Name="loginExists" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Inicio Login no Win Scp&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="WinScpCredential" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Noc" sap:VirtualizedContainerService.HintSize="1050,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[password]" Username="[userName]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: svc_rpa@sep0450cb – WinSCP" sap:VirtualizedContainerService.HintSize="1050,2322" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OutUiElement="[out_WinScpBrowser]" ScopeGuid="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,2031" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="banner" />
+              <Variable x:TypeArguments="x:Boolean" Name="erroAutenticacao" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Host name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Text="[hostName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvElementArea="284, 131, 238, 23" CvType="InputBox" DesignTimeRectangle="285, 132, 236, 21" DesignTimeScaleFactor="1" FriendlyName="'TEdit'" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TEdit' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TEdit' /&gt;" Guid="05d3ee02-66af-41dc-bc09-d088bef6cf83" InformativeScreenshot="47ada6b6c70c9c56cf89eaf81401f486.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TLoginDialog' title='Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvTextArea="283, 116, 56, 11" CvTextArgument="Host name:" CvType="Text" DesignTimeRectangle="283, 116, 56, 11" ElementType="Text" FriendlyName="'Host name'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Text="[userName]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvElementArea="284, 181, 161, 23" CvType="InputBox" DesignTimeRectangle="285, 182, 159, 21" DesignTimeScaleFactor="1" FriendlyName="'TEdit'" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TEdit' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TEdit' /&gt;" Guid="1e43eedc-8011-47c2-8d31-1caef49b9dac" InformativeScreenshot="7ba26d0460baabf7760f9439bd22af1a.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TLoginDialog' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvTextArea="283, 166, 56, 11" CvTextArgument="User name:" CvType="Text" DesignTimeRectangle="283, 166, 56, 11" ElementType="Text" FriendlyName="'User name'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" SecureText="[password]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvElementArea="449, 181, 161, 23" CvType="InputBox" DesignTimeRectangle="450, 182, 159, 21" DesignTimeScaleFactor="1" FriendlyName="'TPasswordEdit'" FullSelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TPasswordEdit' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TGroupBox' title='Session' /&gt;&lt;wnd cls='TPasswordEdit' /&gt;" Guid="c1ff33a8-1313-4162-abe2-4432ebe1256a" InformativeScreenshot="6af1fc7aab97cf235a461a7577317f41.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TLoginDialog' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="13bf3447-3706-49d2-bc67-a5ec837846fa" CvTextArea="449, 165, 52, 12" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="449, 165, 52, 12" ElementType="Text" FriendlyName="'Password'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Login'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NCheckElement_1" Result="[loginExists]" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Version="V3">
+              <uix:NCheckElement.Target>
+                <uix:TargetAnchorable CVScreenId="3d6f5494-cce3-4533-8a0e-b550b5a51fe9" CvTextArea="382, 374, 27, 13" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="346, 367, 98, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;wnd cls='TButton' title='      Login' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TButton' title='      Login' check:text='Login' /&gt;" Guid="9be664dd-68b4-4d62-9e19-801f9adade6e" InformativeScreenshot="5d0966334548b51ee29cb1315ba5fa89.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TLoginDialog' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckElement.Target>
+            </uix:NCheckElement>
+            <If Condition="[loginExists]" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="3d6f5494-cce3-4533-8a0e-b550b5a51fe9" CvTextArea="382, 374, 27, 13" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="339, 367, 98, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;wnd cls='TButton' title='      Login' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TButton' title='      Login' check:text='Login' /&gt;" Guid="a0336fee-49d2-464f-9a84-988d0087b58e" InformativeScreenshot="d7d6608342df8dc7946ab19b8be25715.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TLoginDialog' title='Login' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="90e5c190-6f30-4bf5-a964-60f65199cf9b" CvElementArea="443, 367, 82, 25" CvTextArea="469, 373, 28, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="443, 367, 82, 25" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;wnd cls='TButton' title='Close' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TButton' title='Close' check:text='Close' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Não conseguiu logar&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:UiElementExists DisplayName="Element Exists 'text ____'" Exists="[banner]" sap:VirtualizedContainerService.HintSize="954,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e48c8f8-bd09-4543-b311-77d02fa17cb6" InformativeScreenshot="582b55061a286d83a7346445e5c151fc" Selector="&lt;wnd app='winscp.exe' cls='TAuthenticateForm' title='Authentication Banner – svc_rpa@sep0450cb' /&gt;&lt;wnd aaname='Never show this banner again' cls='TCheckBox' title='&amp;amp;Never show this banner again' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:UiElementExists.Target>
+            </ui:UiElementExists>
+            <If Condition="[banner]" sap:VirtualizedContainerService.HintSize="954,52" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="c868a058-72f1-497e-ab91-66b0114dfb75" CvElementArea="214, 267, 74, 24" CvTextArea="228, 273, 45, 11" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="214, 266, 75, 25" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Continue'" FullSelectorArgument="&lt;wnd cls='TButton' title='Continue' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TButton' title='Continue' check:text='Continue' /&gt;" Guid="9d318e8b-0f66-4a22-82d9-2da6d93127d7" InformativeScreenshot="d14cc5f574b06304b5041e1c75a9cfd9.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TAuthenticateForm' title='Authentication Banner – svc_rpa@sep0450cb' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="c868a058-72f1-497e-ab91-66b0114dfb75" CvElementArea="300, 266, 75, 25" CvTextArea="325, 272, 23, 14" CvTextArgument="Help" CvType="Button" DesignTimeRectangle="300, 266, 75, 25" ElementType="Button" FriendlyName="'&amp;Help'" FullSelectorArgument="&lt;wnd aaname='Help' cls='TButton' title='&amp;amp;Help' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Help' cls='TButton' title='&amp;amp;Help' check:text='&amp;amp;Help' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+              </If.Else>
+            </If>
+            <uix:NCheckState DisplayName="Check App State 'Find Files'" sap:VirtualizedContainerService.HintSize="954,614" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3b81a39a-6985-4bdd-945f-cb3107feb2c4" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,256" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Login no Win Scp realizado com sucesso&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,397" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,152" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="Não foi possível logar no WinScp" To="[in_Emails]">
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                  <Throw Exception="[New BusinessRuleException(&quot;Não foi possível logar no WinScp&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable CVScreenId="ad1805cd-fe11-478b-a2aa-cebbf2e07bd8" CvTextArea="1074, 112, 51, 12" CvTextArgument="Find Files" CvType="Text" DesignTimeRectangle="1051, 108, 78, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Find Files'" FullSelectorArgument="&lt;wnd cls='TTBXToolbar' title='Remote Navigation' /&gt;&lt;ctrl name='Remote Navigation' role='tool bar' /&gt;&lt;ctrl name='Find Files' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='TTBXToolbar' title='Remote Navigation' /&gt;&lt;ctrl name='Remote Navigation' role='tool bar' /&gt;&lt;ctrl name='Find Files' role='push button' automationid='' check:text='Find Files' /&gt;" Guid="9a892761-0d34-4546-9afb-98243cc8ca39" InformativeScreenshot="122e3350da28162617d07705ef310d96.png" ScopeSelectorArgument="&lt;wnd app='winscp.exe' cls='TScpCommanderForm' title='devolucao_pix – svc_rpa@sep0450cb – WinSCP' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Program Files (x86)\WinSCP\winscp.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAYISURBVFhHvZZ5TJNnHMeJfyxRF40i4hZ3aDKXzcTNJRuI52AUbQVEYcHgiSfGCWjc4qKRSVCnbtOAKJGBMs5yy1kKtNwtN3JDgXIKiBzlKNCV757n5S2ywaA43Df5BchDf58Pz/N7nxedhY6i/oXnRNC6HMWtOvMZ2jRqWD1RkUN/IrxfhdC+UYT0DCPopRKBnUO4WvoCSy6mDy48I9rCfnR+ohE41DMKuxfDsH0+BOumfuyp74N5dTd2lXfBQNCAxRfSBuYdTqMRsOti4c39sKLwmv8BTkMFIofUsG1n4Q3jcC6Bc0o68IF7oWqRk0iiY8N/i/6+Kc/CxoxnmcjhWXaRr6DFfp9I15imcwkVCB9QwaZlgIX3gFtB4Z0wLniOrdkt0L8uHVp6TpBqyrOMvf3LXbzo6oJKpWJqZGQUCoUCFZVVcLtxC2Zci6gdO3a8zbafPVQgTDHKwC1qWfizTpgQ+HZJKzZnNsEgRQ6DAxfUCQIhxsbGMDg4iC4i0db2HI2NTZDJ6lBJBCZLsO1nDxXg945MwM0YeDu2S1uxJbMZhiI5NnnF4PrN2wy8t7cXwuQUOJ6/CPuTDjh64jQczjohhB+OvPwCZGRm4eCR4+Ds2m3OImYOFQjuHgav8iUMhXJy5kWqbTkt43CxHF8K6/G1w0V0dHYyWx0dEwdjC9thY56VjclOiw20THdaWpEZaPbzD4RInA4Pz4fgcC0FLGLmUIGgLiUDp9O+yFmcre8mURqmEnhyPTYm1IJjac2cd0trK+wO22O1c/DIIidxPNuCCRlEo7OO5yHNzUNEZDQdzkF2aeZQgatlXa8eNTLti8+Lk1Zcy1FujJPhs4hS2NodhlKpRF19PTP1Sy6nKxc7i/hsC00W0LWmpmaERUSBZ7kPWg0jFZhywxEJ8hcm6bpkK9cH5uMYOWtFfz8zZBRCdilcR8dlAfvbE6Fr9KgCgkJgsfdbcDiclezSv4fe7dNeMqyE3qWkYfsTDmT4+lBUXMIITAenoWvt7R3weeynvcBM2Wy2f/3WPUcUtPHrFJmLfBMudx3bbu4hTaQCYQrUajXmmtHRUcQlCKiIlG0395APq+izrxgYRHNbBxpbyMVDStbQhMqaOpSUVSK/sATZ0nyIM7IhTBEjLlGIqKdx4IdF4sbPd6iAim0399BtpGlubf8bvKJahpLSCuQReJYkj4EnEXhsQhIio2MRQuD+gSH4yfU6cxRsu7lHI6CB19Y3oqKqFsUUXlDMwEXpWRAkixAbL0AEgQeHhuO09zc46mUIF1fX+RGQN7ehtk6Ocgp/Vo5cAs/MyUVqWiYDj6HwqBgE8cNwytsE+/z1YROsj/33PofZbvP/LlBD4GWVNSgicGl+ETKypQw8UZiKmLhEhEc+RSCFPzJm4PbPluJY6VJYB60E13Ut1rvoMK/yydl5b9kWroduJ/vj9NEIUHhhSRmkeYUMPEWcgcSkFDyNTRiHh4ROgWtqb8AKcO8vS50sQeHmD/QGue66M++ORqCwuBQSAk/PkiBZlI4EAo8m8LCIaAQGh8LB23Ra+IREyPJB3n1dRoLCeZ66A751TtBaICe3AGmZOQw8XpBM3ojxCA2PYuCP/QJwyosI+K2aVuB42TKcKteDNV+PSkgo/EzuGqR0P9BegMKFqWmIZ59xCg8I4sOXwL28feFOXr/2HtumSGjgZyrewbmq93Eg5t1RBwL/QfYpUnu8tBJQqdVjUy4YfwL3eeIPr0c+BO6FX++64+atOzh014hIjB/FZPh3Ve/BuXotLtSuw/cE/mP9Boh7H2klIBWnZTD/DdFLZfZyw8HfNjE7cbLsFdypes0E/FLdBlxp+AJpvb/PLkBfJByuRQ7dCXoc2pUFdl35GFaP9XG2cjUL/2gCfpnAXeQGSO/znV3gteOis4AMXLJtxKrhf8Kvyr/CtabNyFA8eXMCmkfNIffDaeBGcGvejizFH29GgHNvudEr+CfTwLfhZosJsvsD5l+Aws099YZ9ZE5I7vYkj9pDiMi004GjZ063PUvhx8AlA0HzL0Dudhltqm3xPFb0/wVbOQuFm69sRAAAAABJRU5ErkJggg==" InformativeScreenshot="4dfaf876c41818d6a84bbf1b69491138.png" Selector="&lt;wnd app='winscp.exe' cls='TScpCommanderForm' title='svc_rpa@sep0450cb – WinSCP' /&gt;" Title="Login" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

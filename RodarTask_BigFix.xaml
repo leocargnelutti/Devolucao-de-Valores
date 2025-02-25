@@ -1,0 +1,306 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RodarTask_BigFix" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_BigFixBrowser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1224,3548</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1234,3483" sap2010:WorkflowViewState.IdRef="Sequence_26">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="tentativas" />
+      <Variable x:TypeArguments="x:Boolean" Name="processado" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1172,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Rodando Task Devolução PIX no Big Fix&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: BigFix Console" sap:VirtualizedContainerService.HintSize="1172,3010" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1138,2719" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ModeledTreeView'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Text="%[k(Up)][k(Up)][k(Up)][k(Up)][k(Up)][k(Up)][k(Up)][k(Up)][k(Enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="9, 107, 482, 441" DesignTimeScaleFactor="1" FriendlyName="'ModeledTreeView'" FullSelectorArgument="&lt;wnd cls='ModeledTreeView' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ModeledTreeView' /&gt;" Guid="2439807e-2441-47df-802e-41273251e06b" InformativeScreenshot="7423c340c2dd5f954aa6fefdc1cefba5.png" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='Afx:*' title='BigFix Console' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Fixlets and Tasks'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1076,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Text="Devolução" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable CVScreenId="f20dbe68-e6fa-40a9-a883-1c09ed01618a" CvTextArea="1100, 85, 126, 12" CvTextArgument="Search Fixlets and Tasks" CvType="Text" DesignTimeRectangle="1099, 82, 250, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Search Fixlets and Tasks'" FullSelectorArgument="&lt;wnd aaname='Fixlets and Tasks' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='RICHEDIT50W' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Fixlets and Tasks' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='RICHEDIT50W' /&gt;" Guid="58e1c63b-2c49-41a9-b53a-798099d95ea7" InformativeScreenshot="241de81f0575b397492413e322b92cd8.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='Afx:*' title='BigFix Console' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="f20dbe68-e6fa-40a9-a883-1c09ed01618a" CvTextArea="493, 85, 88, 12" CvTextArgument="Fixlets and Tasks" CvType="Text" DesignTimeRectangle="493, 85, 88, 12" ElementType="Text" FriendlyName="'Fixlets and Tasks'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Devolução PIX'" sap:VirtualizedContainerService.HintSize="1076,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="cce63729-e508-43a4-89ae-bf872533528e" CvTextArea="498, 134, 618, 15" CvTextArgument="Devolucao PIX - SEP0709CB Servidores 1/ 10 0" CvType="Text" DesignTimeRectangle="493, 131, 1210, 19" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Devolução PIX'" FullSelectorArgument="&lt;wnd aaname='Fixlets and Tasks' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl name='Devolução PIX - SEP0709CB' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Fixlets and Tasks' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl name='Devolução PIX - SEP0709CB' role='list item' automationid='' check:text='Devolução PIX - SEP0709CB' /&gt;" Guid="e7fd14a9-a291-485d-a326-50e1b22f53cd" InformativeScreenshot="3845043d0efde7bc3398d4b7c75e3606.png" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='Afx:*' title='BigFix Console' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Take Action'" sap:VirtualizedContainerService.HintSize="1076,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="e1c01f15-c1a5-4c1d-9278-165e0d50d780" CvTextArea="518, 432, 60, 12" CvTextArgument="Take Action" CvType="Text" DesignTimeRectangle="495, 428, 88, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Take Action'" FullSelectorArgument="&lt;wnd aaname='Task: Devolução PIX - SEP0709CB' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='XTPDockBar' title='xtpBarTop' /&gt;&lt;wnd cls='XTPToolBar' title='Standard' /&gt;&lt;ctrl name='Standard' role='tool bar' /&gt;&lt;ctrl name='Take Action' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Task: Devolução PIX - SEP0709CB' cls='XTPDockingPaneTabbedContainer' /&gt;&lt;wnd cls='XTPDockBar' title='xtpBarTop' /&gt;&lt;wnd cls='XTPToolBar' title='Standard' /&gt;&lt;ctrl name='Standard' role='tool bar' /&gt;&lt;ctrl name='Take Action' role='push button' automationid='' check:text='Take Action' /&gt;" Guid="9051eaf5-c398-40e5-b498-9662330fcb8a" InformativeScreenshot="887805d51f6221b4659d57d5fc01730f.png" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='Afx:*' title='BigFix Console' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="e1c01f15-c1a5-4c1d-9278-165e0d50d780" CvTextArea="522, 404, 146, 15" CvTextArgument="Devolucao PIX - SEP0709CB" CvType="Text" DesignTimeRectangle="522, 404, 146, 15" ElementType="Text" FriendlyName="'Devolucao PIX'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'sep0709cb'" sap:VirtualizedContainerService.HintSize="1076,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="bcf66fdc-d4da-4e83-9b2b-086f7d7bedc1" CvTextArea="383, 273, 400, 15" CvTextArgument="sep0709cb Linux Red Hat ... 2800 MHz Xeo... 05/08/2024 15:... No" CvType="Text" DesignTimeRectangle="360, 270, 1200, 19" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'sep0709cb'" FullSelectorArgument="&lt;wnd ctrlid='1' /&gt;&lt;ctrl name='sep0709cb' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' /&gt;&lt;ctrl name='sep0709cb' role='list item' automationid='' check:text='sep0709cb' /&gt;" Guid="628bf91a-fb33-4b18-a5c2-aefccfa9eb38" InformativeScreenshot="8f6895f990e4a70a05f8bb37478eea49.png" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='#32770' title='Take Action' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset Position="TopLeft" X="59" Y="11" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="1076,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="7a7056f7-b5f2-4d51-a307-37af3d14ecb0" CvElementArea="302, 644, 87, 26" CvTextArea="337, 650, 18, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="302, 644, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='OK' check:text='unchecked' /&gt;" Guid="6aa93f84-c01f-49a4-b0e5-7546e6c7ac04" InformativeScreenshot="2ed0bb362e7bba0d84305af690214937.png" ScopeSelectorArgument="&lt;wnd app='besconsole.exe' cls='#32770' title='Take Action' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="7a7056f7-b5f2-4d51-a307-37af3d14ecb0" CvElementArea="418, 644, 88, 26" CvTextArea="443, 650, 37, 12" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="418, 644, 88, 26" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancel' check:text='Cancel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1076,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[tentativas]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Boolean">[processado]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[processado = False And tentativas &lt; 20]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1076,1113" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1042,977" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="statusTask" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'Status'" sap:VirtualizedContainerService.HintSize="1000,637" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0f59601f-9366-484f-a5b3-77473b98f39a" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Boolean">[processado]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Processado com sucesso&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Ainda não processou&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable CVScreenId="03861820-e5fa-4b7c-8de0-ee34cf6b067e" CvTextArea="52, 125, 63, 16" CvTextArgument="Completed" CvType="Text" DesignTimeRectangle="53, 124, 62, 16" DesignTimeScaleFactor="1" FriendlyName="'Completed'" FullSelectorArgument="&lt;webctrl tableCol='1' tableRow='2' tag='NOBR' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='NOBR' aaname='Completed' check:text='Completed' /&gt;" Guid="6ea97b97-f255-48c2-9239-c6c39fd41e9a" InformativeScreenshot="579d0d1173f606f27197a1ab3cf3ca01.png" ScopeSelectorArgument="&lt;html app='besconsole.exe' url='about:blank' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="03861820-e5fa-4b7c-8de0-ee34cf6b067e" CvTextArea="53, 96, 40, 13" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="53, 95, 39, 16" FriendlyName="'Status'" FullSelectorArgument="&lt;webctrl tableCol='1' tableRow='1' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='B' aaname='Status' check:text='Status' /&gt;" SearchSteps="Selector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                  <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1000,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <Assign sap:VirtualizedContainerService.HintSize="1000,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[tentativas]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[tentativas + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleDoWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Program Files (x86)\BigFix Enterprise\BES Console\besconsole.exe" IconBase64="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" InformativeScreenshot="e2a6d7647d14f708210da4087684a5c7.png" Selector="&lt;wnd app='besconsole.exe' cls='Afx:*' title='BigFix Console' /&gt;" Title="BigFix Console" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="682,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Task executada&quot;]" />
+  </Sequence>
+</Activity>
